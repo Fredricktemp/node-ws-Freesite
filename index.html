@@ -1,224 +1,104 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoPulse | 绿色科技引领未来</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>EcoNova | Sustainable Technology Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root {
-            --primary: #2d6a4f; /* 森林绿 */
-            --secondary: #74c69d; /* 嫩芽绿 */
-            --accent: #d8f3dc; /* 淡色背景 */
-            --dark: #1b4332; /* 深色强调 */
-            --text: #333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text);
-            overflow-x: hidden;
-        }
-
-        /* 导航栏 */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* 英雄视差区域 */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        /* 服务板块 */
-        .services {
-            padding: 5rem 10%;
-            background: var(--accent);
-            text-align: center;
-        }
-
-        .section-title {
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: var(--dark);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card i {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        /* 动画 */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* 响应式 */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass-effect { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
 
-    <nav>
-        <div class="logo"><i class="fas fa-leaf"></i> EcoPulse</div>
-        <ul class="nav-links">
-            <li><a href="#home">首页</a></li>
-            <li><a href="#services">核心技术</a></li>
-            <li><a href="#projects">成功案例</a></li>
-            <li><a href="#contact">联系我们</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero" id="home">
-        <h1>用智慧定义零碳未来</h1>
-        <p>EcoPulse 致力于通过尖端的人工智能与清洁能源技术，为全球企业提供可持续发展的闭环解决方案。</p>
-        <a href="#services" class="btn">探索我们的技术</a>
-    </section>
-
-    <section class="services" id="services">
-        <h2 class="section-title">核心业务板块</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-solar-panel"></i>
-                <h3>智能光伏系统</h3>
-                <p>利用AI算法优化能源捕获效率，较传统系统提升25%的输出功率。</p>
+    <header class="fixed w-full z-50 glass-effect border-b border-slate-200">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="leaf" class="text-emerald-600"></i>
+                <span class="text-xl font-bold tracking-tight text-emerald-900">ECONOVA</span>
             </div>
-            <div class="card">
-                <i class="fas fa-wind"></i>
-                <h3>风能预测</h3>
-                <p>基于大数据的风场调度系统，精准预测发电量，减少并网损耗。</p>
+            <div class="hidden md:flex gap-8 font-medium text-sm text-slate-600">
+                <a href="#" class="hover:text-emerald-600 transition">Solutions</a>
+                <a href="#" class="hover:text-emerald-600 transition">Technology</a>
+                <a href="#" class="hover:text-emerald-600 transition">Impact</a>
+                <a href="#" class="hover:text-emerald-600 transition">Contact</a>
             </div>
-            <div class="card">
-                <i class="fas fa-seedling"></i>
-                <h3>碳足迹监控</h3>
-                <p>全自动化的ESG数字化平台，帮助企业实时追踪并抵消碳排放。</p>
+            <button class="bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-emerald-700 transition">
+                Get Started
+            </button>
+        </nav>
+    </header>
+
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                Engineering a Greener Tomorrow
+            </span>
+            <h1 class="mt-8 text-5xl md:text-7xl font-bold text-slate-900 leading-tight">
+                Decarbonizing Industry <br/> <span class="text-emerald-600">Through Innovation.</span>
+            </h1>
+            <p class="mt-6 text-xl text-slate-600 max-w-2xl mx-auto">
+                We bridge the gap between high-performance engineering and ecological preservation with scalable clean-tech infrastructure.
+            </p>
+            <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+                <button class="bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+                    Explore Solutions
+                </button>
+                <button class="border border-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 transition">
+                    View Impact Report
+                </button>
             </div>
         </div>
     </section>
 
-    <script>
-        // 简单的平滑滚动效果
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Smart Energy Grids</h3>
+                    <p class="text-slate-600 leading-relaxed">AI-driven distribution systems that optimize renewable energy consumption in real-time.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="droplet" class="text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Circular Water Tech</h3>
+                    <p class="text-slate-600 leading-relaxed">Closed-loop purification systems designed for zero-waste industrial manufacturing.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="bar-chart-3" class="text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Carbon Analytics</h3>
+                    <p class="text-slate-600 leading-relaxed">Precision monitoring software to track, verify, and reduce corporate carbon footprints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // 导航栏滚动交互
-        window.onscroll = function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.padding = "0.8rem 10%";
-            } else {
-                nav.style.padding = "1rem 10%";
-            }
-        };
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <i data-lucide="leaf" class="text-emerald-500"></i>
+                <span class="text-xl font-bold text-white tracking-tight">ECONOVA</span>
+            </div>
+            <p class="text-sm">© 2026 EcoNova Technologies Inc. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+                <a href="#" class="hover:text-white transition">Twitter</a>
+                <a href="#" class="hover:text-white transition">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
     </script>
 </body>
 </html>
